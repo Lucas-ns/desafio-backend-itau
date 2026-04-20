@@ -1,5 +1,6 @@
 package dev.java10x.desafio_itau_backend.transacao.controller;
 
+import dev.java10x.desafio_itau_backend.transacao.SwaggerDocs;
 import dev.java10x.desafio_itau_backend.transacao.dto.TransacaoDTO;
 import dev.java10x.desafio_itau_backend.transacao.service.TransacaoService;
 import jakarta.validation.Valid;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/transacao")
-public class TransacaoController {
+public class TransacaoController implements SwaggerDocs {
 
     private final TransacaoService service;
 
