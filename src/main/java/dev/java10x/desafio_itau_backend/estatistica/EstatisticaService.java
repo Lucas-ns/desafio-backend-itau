@@ -2,7 +2,6 @@ package dev.java10x.desafio_itau_backend.estatistica;
 
 import dev.java10x.desafio_itau_backend.transacao.repository.TransacaoRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.OffsetDateTime;
 import java.util.DoubleSummaryStatistics;
@@ -19,7 +18,6 @@ public class EstatisticaService {
         this.estatisticaConfig = estatisticaConfig;
     }
 
-    @GetMapping
     public EstatisticaDTO estatistica() {
         OffsetDateTime limite = OffsetDateTime.now().minusSeconds(estatisticaConfig.getSegundos());
 
