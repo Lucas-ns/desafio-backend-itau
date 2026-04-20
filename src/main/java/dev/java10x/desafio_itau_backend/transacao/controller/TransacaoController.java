@@ -1,7 +1,5 @@
 package dev.java10x.desafio_itau_backend.transacao.controller;
 
-
-import dev.java10x.desafio_itau_backend.estatistica.EstatisticaDTO;
 import dev.java10x.desafio_itau_backend.transacao.dto.TransacaoDTO;
 import dev.java10x.desafio_itau_backend.transacao.service.TransacaoService;
 import jakarta.validation.Valid;
