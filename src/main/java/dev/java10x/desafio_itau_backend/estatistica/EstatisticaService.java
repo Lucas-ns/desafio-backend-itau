@@ -12,13 +12,16 @@ public class EstatisticaService {
 
     private final TransacaoRepository repository;
 
-    public EstatisticaService(TransacaoRepository repository) {
+    private final EstatisticaConfig estatisticaConfig;
+
+    public EstatisticaService(TransacaoRepository repository, EstatisticaConfig estatisticaConfig) {
         this.repository = repository;
+        this.estatisticaConfig = estatisticaConfig;
     }
 
     @GetMapping
     public EstatisticaDTO estatistica() {
-        OffsetDateTime limite = OffsetDateTime.now().minusSeconds(60);
+        OffsetDateTime limite = OffsetDateTime.now().minusSeconds(estatisticaConfig.getSegundos());
 
         DoubleSummaryStatistics stats = repository.listarTransacoes().stream()
                 .filter(t -> t.getDataHora().isAfter(limite))

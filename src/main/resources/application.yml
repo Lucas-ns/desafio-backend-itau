@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: desafio-itau-backend
+
+estatistica:
+  config:
+    segundos: 120
